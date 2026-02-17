@@ -33,9 +33,39 @@
     display: grid;
     grid-template: 1fr / 20px 1fr ;
     gap: 20px;  
-    
+    align-items: center;
 }
 
+.nav-label {
+    /* height: 16px; */
+    font-weight: bold;
+}
+.navigation-main, .navigation-secondary {
+    display: grid;
+    gap: 20px;
+
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header {
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.search-icon {
+    width: 15px;
+    height: 15px;
+}
+
+.search-bar {
+    width: 100%;
+}
 
 .main{
     background-color: #e2e8f0;
