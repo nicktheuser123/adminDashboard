@@ -6,7 +6,7 @@
 
 .container {
     display: grid;
-    grid-template: 150px 1fr / 1fr 4fr ;
+    grid-template: 150px 1fr / 1fr 4fr ;    
     height: 100vh;
 }
 
@@ -55,7 +55,15 @@
     display: grid;
     grid-template: 1fr 1fr / 2fr 1fr;
     align-items: center;
-    justify-items: center;
+    
+}
+
+.search-container {
+    display: grid;
+    grid-template: 1fr / 20px 1fr;
+    gap: 5px;
+    padding: 20px 30px;
+    
 }
 
 .search-icon {
@@ -64,12 +72,33 @@
 }
 
 .search-bar {
-    width: 100%;
+
 }
 
-.main{
+.notify-container {
+    display: grid;
+    grid: 1fr / 25px 50px 150px;
+    justify-items: center;
+    padding: 20px 30px;
+}
+
+.user-container {
+    display: grid;
+    grid: 1fr / 50px 4fr ;
+    justify-items: start;
+    padding: 20px 30px;
+}
+
+.actions-container{
+    display: grid;
+    grid: 1fr / repeat(3, 1fr) ;
+    gap: 20px;
+    padding-right: 40px;
+}
+
+.main {
     background-color: #e2e8f0;
-
-
+    padding: 20px
 }
+
 
