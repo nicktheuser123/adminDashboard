@@ -1,4 +1,3 @@
-@import url();
 
 :root {
     --main-blue: #1992d4;
@@ -8,16 +7,10 @@
     --txt: black;
     --txt-light: white;
     --txt-white: var(--main-white);
+    --txt-dark-grey: grey;
+    --shadow-card: 2px 1px 5px rgba(128, 128, 128, 0.474);
 }
 
-/* .roboto-bold {
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-variation-settings:
-    "width" 100;
-} */
 
 * {
     margin: 0px;
@@ -26,21 +19,24 @@
 }
 
 
-
 body {
     font-family: Roboto;
     color: var(--txt); 
 }
 
-
 .container {
     display: grid;
     grid-template: 150px 1fr / 1fr 4fr ;    
-    height: 100vh;
+    min-height: 100%;
 }
 
 .header {
     background-color: var(--main-white);
+    box-shadow:  var(--shadow-card);
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+    align-items: center;
+    position: relative;    
 
 }
 
@@ -79,12 +75,6 @@ body {
     font-weight: bold;
 }
 
-.header {
-    display: grid;
-    grid-template: 1fr 1fr / 2fr 1fr;
-    align-items: center;
-    
-}
 
 .search-container {
     display: grid;
@@ -114,15 +104,16 @@ body {
 .notify-container {
     display: grid;
     grid: 1fr / 25px 50px 130px;
-    justify-self: end;
-    justify-items: center;
+    justify-self: end;    
     padding: 20px 30px;
     align-items: center;
     gap: 20px;
     justify-items: end;
 }
 
-
+.n-title{
+    justify-self: center;
+}
 
 .user-container {
     display: grid;
@@ -174,6 +165,7 @@ body {
    display: grid;
     grid: 1fr 1fr 1fr / 1fr 1fr;
     gap: 20px;
+    
 }
     
 .project-title, .ann-title , .trending-title {
@@ -182,6 +174,27 @@ body {
     margin-bottom: 10px;
 }
 
+.project-body {
+    font-size: 14px;
+    color: var(--txt-dark-grey);
+}
+
+.sub-title {
+    font-weight: bold;
+
+}
+
+.ann-sub-title {
+    font-size: 14px;    
+}
+
+.ann-body{ 
+    font-size: 12px;
+    color: var(--txt-dark-grey)
+}
+
+
+
 .card {
     background-color: var(--main-white);
     padding: 30px 20px;
@@ -189,7 +202,7 @@ body {
     border-left: 5px solid var(--main-accent);
     display: grid;
     grid: 25px 1fr 45px / 1fr;
-    
+    box-shadow:  var(--shadow-card);
 }
 
 .project-actions {
@@ -214,6 +227,7 @@ body {
     border-radius: 10px;
     display: grid;
     grid: 1fr 1fr 1fr/ 1fr;
+    box-shadow:  var(--shadow-card);
 
 }
 
@@ -241,10 +255,18 @@ body {
     border-radius: 10px;
     display: grid;
     grid: 1fr 1fr 1fr/ 1fr;
-
+    gap: 10px;
+    box-shadow:  var(--shadow-card);
 }
 
 .user-item {
     display: grid;
     grid: 1fr / 60px 1fr ;
+    align-items: center;
+    gap: 20px;
+}
+
+.trending-body {
+    color: var(--txt-dark-grey);
+    font-size: 16px;
 }
